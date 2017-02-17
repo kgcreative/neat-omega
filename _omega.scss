@@ -1,0 +1,20 @@
+@charset "UTF-8";
+// todo: Add documentation
+
+@mixin omega($selector: auto, $grid: $neat-grid) {
+  $_grid-columns: _retrieve-neat-setting($grid, columns);
+  $_grid-gutter: _retrieve-neat-setting($grid, gutter);
+
+  @if $selector == auto {
+    &:last-child {
+      margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
+    }
+  } @else {
+    &:nth-of-type(#{$selector}) {
+      margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
+    }
+    &:last-child {
+      margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
+    }
+  }
+}
