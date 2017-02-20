@@ -58,7 +58,7 @@
       margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
     }
     &:nth-of-type(#{$selector}+1) {
-      clear: _neat-direction($grid);
+      clear: _neat-float-direction($grid);
     }
   }
 }
