@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright © 2017 [Stanford University](http://stanford.edu)
+Copyright © 2017 [Kevin Garcia](github.com/kgcreative)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the “Software”), to deal
