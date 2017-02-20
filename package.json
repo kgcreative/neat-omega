@@ -1,0 +1,33 @@
+{
+  "name": "neat-omega",
+  "version": "2.0.0",
+  "description": "An omega mixin for Neat 2.0",
+  "keywords": [
+    "columns",
+    "grid",
+    "layout",
+    "media",
+    "media-queries",
+    "neat",
+    "omega",
+    "sass",
+    "scss",
+    "semantic"
+  ],
+  "homepage": "https://github.com/kgcreative/neat-omega",
+  "bugs": {
+    "url": "https://github.com/kgcreative/neat-omega/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Kevin Garcia",
+    "url": "https://github.com/kgcreative/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kgcreative/neat-omega.git"
+  },
+  "dependencies": {
+    "bourbon-neat": "^2.0.0",
+  },
+}
