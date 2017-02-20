@@ -29,7 +29,11 @@
 ///   }
 ///
 /// @example css - CSS Output
-///   .element {
+///   .element:last-child {
+///     margin-right: 20px;
+///   }
+///
+///  .nth-element:last-child {
 ///     margin-right: 20px;
 ///   }
 ///
