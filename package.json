@@ -28,6 +28,6 @@
     "url": "https://github.com/kgcreative/neat-omega.git"
   },
   "dependencies": {
-    "bourbon-neat": "^2.0.0",
+    "bourbon-neat": "^2.0.0"
   }
 }
