@@ -16,7 +16,7 @@
   ],
   "homepage": "https://github.com/kgcreative/neat-omega",
   "bugs": {
-    "url": "https://github.com/kgcreative/neat-omega/issues"
+    "url": "git+https://github.com/kgcreative/neat-omega/issues"
   },
   "license": "MIT",
   "author": {
