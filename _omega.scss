@@ -46,7 +46,6 @@
 ///   }
 
 @mixin omega($selector: auto, $grid: $neat-grid) {
-  $_grid-columns: _retrieve-neat-setting($grid, columns);
   $_grid-gutter: _retrieve-neat-setting($grid, gutter);
 
   &:last-child {
