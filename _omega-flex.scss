@@ -1,29 +1,35 @@
 @charset "UTF-8";
 /// Creates an opposite direction margin on the current object of a grid.
-/// This is primarily used to self-correct an item in a centered-flex grid
+/// This is primarily used to self-correct alignment in a centered flex grid.
 ///
 /// @group Features
 ///
 /// @name Omega flex
 ///
-/// @argument {self | auto} [self]
-///   When passed an `nth-of-type` argument of type `*n` with `block` display, 
-///   the flex-omega mixin automatically creates a margin right on the last 
-///   object in the row and the last object in the container,
-///   which causes a centered flexbox to self correct.
-///   Note that this mixin does NOT clear floats in order to allow for complex nth selectors.
+/// @argument { null | 'string' | auto} [auto] $selector 
+///   If null, the omega-flex mixin creates a margin-right on the current object.
+///   If passed a string, the omega-flex misin creates a margin-right on the specified selector.
+///   If auto, the omega-flex mixin creates a margin-right on the last object in the container.
 ///
 /// @argument {map} $grid [$neat-grid]
 ///   The grid to be used to generate the margins.
 ///   By default, the global `$neat-grid` will be used.
 ///
 /// @example scss - Usage
-///   .element:nth-of-type(3n+2) {
-///     @include flex-omega;
-///   }
+///   @include flex-omega('.element:nth-of-type(3n+2)');
 ///
 /// @example css - CSS Output
 ///   .element:nth-of-type(3n+2) {
+///     margin-right: 20px;
+///   }
+///
+/// @example scss - Usage
+///  .element {
+///     @include flex-omega('&:nth-of-type(3n+1)');
+///  }
+///
+/// @example css - CSS Output
+///   .element:nth-of-type(3n+1) {
 ///     margin-right: 20px;
 ///   }
 ///
@@ -37,14 +43,18 @@
 ///     margin-right: 20px;
 ///   }
 
-@mixin omega-flex($selector: auto, $grid: $neat-grid) {
+@mixin omega-flex($selector: null, $grid: $neat-grid) {
   $_grid-gutter: _retrieve-neat-setting($grid, gutter);
 
-  @if $selector == self {
+  @if $selector == null {
     margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
   } @else if $selector == auto {
     &:last-child {
       margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
+    }
+  } @else if type-of($selector) == string {
+    #{$selector} {
+      $_grid-gutter: _retrieve-neat-setting($grid, gutter);
     }
   }
 }
