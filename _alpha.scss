@@ -43,7 +43,7 @@
 @mixin omega($selector: self, $grid: $neat-grid) {
   @if $selector == self {
     clear: _neat-float-direction($grid);
-  @else {
+  } @else {
     #{$selector} {
       clear: _neat-float-direction($grid);
     }
