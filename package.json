@@ -1,6 +1,6 @@
 {
   "name": "neat-omega",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "An omega mixin for Neat 2.0",
   "keywords": [
     "columns",
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "git+https://github.com/kgcreative/neat-omega/issues"
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "author": {
     "name": "Kevin Garcia",
     "url": "https://github.com/kgcreative/"
