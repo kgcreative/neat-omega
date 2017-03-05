@@ -1,6 +1,6 @@
 {
   "name": "neat-omega",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "An omega mixin for Neat 2.0",
   "keywords": [
     "columns",
@@ -28,6 +28,6 @@
     "url": "https://github.com/kgcreative/neat-omega.git"
   },
   "dependencies": {
-    "bourbon-neat": "^2.0.0"
+    "bourbon-neat": "^2"
   }
 }
