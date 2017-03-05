@@ -1,4 +1,5 @@
 @import
   '_alpha',
   '_omega',
+  '_nth-omega',
   '_omega-flex';
