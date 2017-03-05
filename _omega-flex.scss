@@ -1,16 +1,12 @@
 @charset "UTF-8";
-/// Creates a margin right on the last object in the row and the last 
-/// object in the container which causes a centered flexbox to self correct.
-///
-/// It also brings back the neat 1.8 behavior of clearing *n + 1 block element,
-/// which addresses a secondary edge case where short elements don't
-/// clear the full row in floated 'box' layouts.
+/// Creates an opposite direction margin on the current object of a grid.
+/// This is primarily used to self-correct an item in a centered-flex grid
 ///
 /// @group Features
 ///
-/// @name Flex-omega
+/// @name Omega flex
 ///
-/// @argument {number (`nth-of-type`) | auto} [auto]
+/// @argument {self | auto} [self]
 ///   When passed an `nth-of-type` argument of type `*n` with `block` display, 
 ///   the flex-omega mixin automatically creates a margin right on the last 
 ///   object in the row and the last object in the container,
@@ -22,36 +18,32 @@
 ///   By default, the global `$neat-grid` will be used.
 ///
 /// @example scss - Usage
-///   .element {
+///   .element:nth-of-type(3n+2) {
 ///     @include flex-omega;
 ///   }
 ///
-///   .nth-element {
-///     @include flex-omega(4n+1);
+/// @example css - CSS Output
+///   .element:nth-of-type(3n+2) {
+///     margin-right: 20px;
+///   }
+///
+/// @example scss - Usage
+///   .element {
+///     @include flex-omega(auto);
 ///   }
 ///
 /// @example css - CSS Output
 ///   .element:last-child {
 ///     margin-right: 20px;
 ///   }
-///
-///  .nth-element:last-child {
-///     margin-right: 20px;
-///   }
-///
-///   .nth-element:nth-of-type(4n+1) {
-///     margin-right: 20px;
-///   }
 
-@mixin flex-omega($selector: auto, $grid: $neat-grid) {
+@mixin omega-flex($selector: auto, $grid: $neat-grid) {
   $_grid-gutter: _retrieve-neat-setting($grid, gutter);
 
-  &:last-child {
+  @if $selector == self {
     margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
-  }
-
-  @if $selector != auto {
-    &:nth-of-type(#{$selector}) {
+  } @else if $selector == auto {
+    &:last-child {
       margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
     }
   }
