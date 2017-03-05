@@ -46,15 +46,15 @@
 @mixin omega-flex($selector: null, $grid: $neat-grid) {
   $_grid-gutter: _retrieve-neat-setting($grid, gutter);
 
-  @if $selector == null {
+  @if ($selector == null) or ($selector == self)  {
     margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
-  } @else if $selector == auto {
+  } @else if ($selector == auto) or ($selector == last) {
     &:last-child {
       margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
     }
-  } @else if type-of($selector) == string {
+  } @else {
     #{$selector} {
-      $_grid-gutter: _retrieve-neat-setting($grid, gutter);
+      margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
     }
   }
 }
