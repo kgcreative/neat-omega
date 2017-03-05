@@ -14,7 +14,7 @@
 ///   By default, the global `$neat-grid` will be used.
 ///
 /// @example scss - Usage
-///   @include flex-omega('.element:nth-of-type(3n+2)');
+///   @include omega('.element:nth-of-type(3n+2)');
 ///
 /// @example css - CSS Output
 ///   .element:nth-of-type(3n+2) {
@@ -23,7 +23,7 @@
 ///
 /// @example scss - Usage
 ///  .element {
-///     @include flex-omega('&:nth-of-type(3n+1)');
+///     @include omega('&:nth-of-type(3n+1)');
 ///  }
 ///
 /// @example css - CSS Output
@@ -41,14 +41,14 @@
 ///     margin-right: 20px;
 ///   }
 
-@mixin omega-flex($selector: null, $grid: $neat-grid) {
+@mixin omega($selector: null, $grid: $neat-grid) {
   $_grid-gutter: _retrieve-neat-setting($grid, gutter);
 
-  @if $selector == null {
+  @if ($selector == null) or ($selector == self) {
     margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
   } @else {
     #{$selector} {
-      $_grid-gutter: _retrieve-neat-setting($grid, gutter);
+      margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
     }
   }
 }
