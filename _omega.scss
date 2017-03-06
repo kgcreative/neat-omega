@@ -41,10 +41,10 @@
 ///     margin-right: 20px;
 ///   }
 
-@mixin omega($selector: null, $grid: $neat-grid) {
+@mixin omega($selector: self, $grid: $neat-grid) {
   $_grid-gutter: _retrieve-neat-setting($grid, gutter);
 
-  @if ($selector == null) or ($selector == self) {
+  @if ($selector == self) or ($selector == null)  {
     margin-#{_neat-opposite-direction($grid)}: $_grid-gutter;
   } @else {
     #{$selector} {
