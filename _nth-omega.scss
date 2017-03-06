@@ -38,7 +38,7 @@
 ///   }
 ///
 
-@mixin omega($selector, $grid: $neat-grid) {
+@mixin nth-omega($selector, $grid: $neat-grid) {
   $_grid-gutter: _retrieve-neat-setting($grid, gutter);
   
   &:nth-of-type(#{$selector}) {
