@@ -1,7 +1,7 @@
 {
   "name": "neat-omega",
-  "version": "2.0.6",
-  "description": "An omega mixin for Neat 2.0",
+  "version": "2.0.7",
+  "description": "An family of omega mixins for Neat 2.0",
   "keywords": [
     "columns",
     "grid",
