@@ -17,4 +17,4 @@ Originally created to address: https://github.com/thoughtbot/neat/issues/543
 
 `npm install --save-dev neat-omega`, then add `@import neat-omega` after your `@import neat` statement in your scss.
 
-You will need to add `node-modules/neat-omega/core/` to your sass import paths.
+You will need to add `node-modules/neat-omega/` to your sass import paths.
