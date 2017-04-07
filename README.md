@@ -13,8 +13,13 @@ The Omega family is a group of mixins that accomplish several supplemental goals
 
 Originally created to address: https://github.com/thoughtbot/neat/issues/543
 
-# use
+# Use with NPM
 
-`npm install --save-dev neat-omega`, then add `@import neat-omega` after your `@import neat` statement in your scss.
+- `npm install --save neat-omega`
+- add `@import neat-omega` after your `@import neat` statement in your scss.
+- add `node-modules/neat-omega/` to your sass import paths.
 
-You will need to add `node-modules/neat-omega/` to your sass import paths.
+# use with Bower
+- `bower install --save neat-omega`
+- add `@import neat-omega` after your `@import neat` statement in your scss.
+- add `bower_components/neat-omega/` to your sass import paths.
