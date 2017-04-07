@@ -1,0 +1,33 @@
+{
+  "name": "neat-omega",
+  "description": "A family of omega mixins for Neat 2.0",
+  "version": "2.0.9",
+  "main": "neat-omega.scss",
+  "authors": [
+    "Kevin Garcia"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "columns",
+    "grid",
+    "layout",
+    "media",
+    "media-queries",
+    "neat",
+    "omega",
+    "sass",
+    "scss",
+    "semantic"
+  ],
+  "homepage": "https://github.com/kgcreative/neat-omega",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "neat": "^2"
+  }
+}
