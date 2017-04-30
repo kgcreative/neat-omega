@@ -8,12 +8,12 @@ Originally created to address: https://github.com/thoughtbot/neat/issues/543
 
 - `npm install --save neat-omega`
 - add `@import neat-omega` after your `@import neat` statement in your scss.
-- add `node-modules/neat-omega/` to your sass import paths.
+- add `node-modules/neat-omega/core` to your sass import paths.
 
 ## with Bower
 - `bower install neat-omega`
 - add `@import neat-omega` after your `@import neat` statement in your scss.
-- add `bower_components/neat-omega/` to your sass import paths.
+- add `bower_components/neat-omega/core` to your sass import paths.
 
 # Documentation
 
