@@ -1,4 +1,4 @@
-# Neat-Omega Family for Neat 2.X
+# Neat-Omega Family for Bourbon Neat (2.x.x)
 The Omega family is a group of mixins that accomplish several supplemental goals within the Bourbon-Neat framework.
 
 Originally created to address: https://github.com/thoughtbot/neat/issues/543

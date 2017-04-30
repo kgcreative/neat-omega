@@ -1,7 +1,7 @@
 {
   "name": "neat-omega",
   "description": "A family of omega mixins for Neat 2.0",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "main": "neat-omega.scss",
   "authors": [
     "Kevin Garcia"
