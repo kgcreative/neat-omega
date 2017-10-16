@@ -103,11 +103,14 @@ element {
   margin-right: 20px;
 }
 ```
----
+## omega-flex
+`@include omega-flex($selector: null, $grid: $neat-grid)`
+- Adds a margin right to the specified object, or if auto, to the last child of the grid.
+
 <strong>example SCSS</strong>
 ```SCSS
 .element {
-  @include flex-omega;
+  @include omega-flex;
 }
 ```
 <strong>example CSS</strong>
@@ -116,13 +119,10 @@ element {
   margin-right: 20px;
 }
 ```
-
-## omega-flex
-`@include omega-flex($selector: null, $grid: $neat-grid)`
-- Adds a margin right to the specified object, or if auto, to the last child of the grid.
+---
 <strong>example SCSS</strong>
 ```SCSS
-@include flex-omega('.element:nth-of-type(3n+2)');
+@include omega-flex('.element:nth-of-type(3n+2)');
 ```
 <strong>example CSS</strong>
 ```CSS
@@ -135,7 +135,7 @@ element {
 <strong>example SCSS</strong>
 ```SCSS
 .element {
-  @include flex-omega('&:nth-of-type(3n+1)');
+  @include omega-flex('&:nth-of-type(3n+1)');
 }
 ```
 <strong>example CSS</strong>
@@ -149,7 +149,7 @@ element {
 <strong>example SCSS</strong>
 ```SCSS
 .element {
-  @include flex-omega(auto);
+  @include omega-flex(auto);
 }
 ```
 <strong>example CSS</strong>
