@@ -1,12 +1,16 @@
 {
   "name": "neat-omega",
-  "description": "A family of omega mixins for Neat 2.0",
-  "version": "3.0.0",
+  "description": "A family of omega mixins for Neat 3.x+",
+  "version": "3.1.0",
   "main": "neat-omega.scss",
-  "authors": [
-    "Kevin Garcia"
-  ],
   "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "keywords": [
     "columns",
     "grid",
@@ -19,15 +23,15 @@
     "scss",
     "semantic"
   ],
-  "homepage": "https://github.com/kgcreative/neat-omega",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+  "authors": [
+    "Kevin Garcia"
   ],
+  "homepage": "https://github.com/kgcreative/neat-omega",
   "dependencies": {
-    "neat": "^2"
+    "neat": "^3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kgcreative/neat-omega"
   }
 }

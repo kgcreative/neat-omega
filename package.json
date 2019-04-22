@@ -1,7 +1,7 @@
 {
   "name": "neat-omega",
-  "version": "3.0.1",
-  "description": "A family of omega mixins for Neat 2.0",
+  "version": "3.1.0",
+  "description": "A family of omega mixins for Neat 3.x+",
   "keywords": [
     "columns",
     "grid",
@@ -28,6 +28,6 @@
     "url": "https://github.com/kgcreative/neat-omega.git"
   },
   "dependencies": {
-    "bourbon-neat": "^2"
+    "bourbon-neat": "^3"
   }
 }

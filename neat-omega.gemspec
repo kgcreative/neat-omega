@@ -11,6 +11,6 @@ Gem::Specification.new do |s|
   s.name          = "neat-omega"
   s.platform      = Gem::Platform::RUBY
   s.require_paths = ["lib"]
-  s.summary       = "An omega mixin family for Neat 2.x"
-  s.version       = "3.0.0"
+  s.summary       = "An omega mixin family for Neat 3.x"
+  s.version       = "3.1.0"
 end
