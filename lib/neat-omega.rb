@@ -1,6 +1,11 @@
+require "sass"
 
-neat_omega_path = File.expand_path("../../core", __FILE__)
-ENV["SASS_PATH"] = [
-  ENV["SASS_PATH"],
-  neat_omega_path,
-].compact.join(File::PATH_SEPARATOR)
+module NeatOmega
+  if defined?(Rails::Engine)
+    class Engine < ::Rails::Engine
+      config.assets.paths << File.expand_path("../core", __dir__)
+    end
+  else
+    Sass.load_paths << File.expand_path("../core", __dir__)
+  end
+end

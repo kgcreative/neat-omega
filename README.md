@@ -15,6 +15,10 @@ Originally created to address: https://github.com/thoughtbot/neat/issues/543
 - add `@import neat-omega` after your `@import neat` statement in your scss.
 - add `bower_components/neat-omega/core` to your sass import paths.
 
+## with Bundler
+- add `gem "neat-omega"` to Gemfile
+- add `@import neat-omega` after your `@import neat` statement in your scss.
+
 # Documentation
 
 ## alpha
